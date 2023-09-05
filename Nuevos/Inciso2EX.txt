@@ -1,0 +1,13 @@
+Es importante notar que, aunque la ley de los grandes números sugiere que las medias muestrales deben acercarse a 
+la media real a medida que aumenta el tamaño de la muestra (n), esto no garantiza que en cada iteración obtengamos
+ una media más cercana. En otras palabras, las medias parciales pueden fluctuar alrededor de la media real, especialmente 
+ cuando el tamaño de la muestra es relativamente pequeño en comparación con la variabilidad de la distribución.
+
+Cuando observas que las medias parciales fluctúan alrededor de la media real en la distribución de Poisson,
+ esto es una representación de la variabilidad inherente de la distribución. La distribución de Poisson es discreta
+  y puede generar valores que varían en gran medida. A medida que aumentas el tamaño de la muestra (n), generalmente verás
+   que las medias parciales tienden a acercarse más a la media real en promedio, pero aún pueden haber fluctuaciones en cada iteración.
+
+En resumen, la fluctuación en las medias parciales es un comportamiento esperado, y es importante observar la tendencia general a
+ medida que n aumenta en lugar de centrarse en valores individuales. La ley de los grandes números garantiza que, en promedio, las 
+ medias muestrales se aproximarán a la media real a medida que n tiende al infinito.
