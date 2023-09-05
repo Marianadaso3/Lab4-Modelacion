@@ -1,0 +1,52 @@
+El método de transformada inversa es una técnica que se utiliza para generar números aleatorios que sigan una distribución de
+probabilidad específica a partir de números aleatorios uniformes entre 0 y 1. En este caso, estamos interesados en generar personas 
+al azar con base en dos características: género (varón o mujer) y si usan lentes o no.
+
+La función `generate_random_person` que implementa el método de transformada inversa:
+
+```python
+def generate_random_person():
+    r1 = random.uniform(0, 1)  # Generamos un número aleatorio entre 0 y 1 para el género
+    r2 = random.uniform(0, 1)  # Generamos otro número aleatorio entre 0 y 1 para los lentes
+    
+    if r1 <= probability_woman:
+        gender = 'Mujer'
+    else:
+        gender = 'Varón'
+    
+    if r2 <= probability_glasses:
+        glasses = 'Usa lentes'
+    else:
+        glasses = 'No usa lentes'
+    
+    return gender, glasses
+```
+
+Funciona:
+
+1. Generamos dos números aleatorios uniformes, `r1` y `r2`, que están distribuidos entre 0 y 1. Estos números representan la probabilidad de
+ género y la probabilidad de usar lentes, respectivamente.
+
+2. Comparamos `r1` con `probability_woman`, que es la probabilidad de ser mujer. Si `r1` es menor o igual a `probability_woman`, 
+consideramos que la persona es mujer; de lo contrario, consideramos que es varón.
+
+3. Comparamos `r2` con `probability_glasses`, que es la probabilidad de usar lentes. Si `r2` es menor o igual a `probability_glasses`, 
+consideramos que la persona usa lentes; de lo contrario, consideramos que no usa lentes.
+
+De esta manera, estamos generando personas al azar que siguen las probabilidades especificadas para género y uso de lentes, 
+utilizando números aleatorios uniformes y la técnica de transformada inversa.
+
+Luego, en las simulaciones, utilizamos esta función para crear personas al azar y calcular las probabilidades requeridas.
+
+
+Las probabilidades teóricas calculadas  son:
+
+Probabilidad de ser mujer y usar gafas: 0.15
+Probabilidad de ser varón dado que no usa lentes: 0.6
+
+La discrepancia podría deberse a la naturaleza aleatoria de las simulaciones. Cuantas más simulaciones realices (aumentando num_simulations),
+ es más probable que los resultados simulados se acerquen a los valores teóricos.
+
+En general, los resultados simulados son aproximados y dependen del número de simulaciones realizadas. Cuanto mayor sea el 
+número de simulaciones, más precisos serán los resultados simulados. En este caso, los resultados obtenidos parecen estar en 
+el rango de lo razonable y podrían considerarse aceptables para muchas aplicaciones prácticas.
