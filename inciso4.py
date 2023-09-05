@@ -24,8 +24,7 @@ sim_results = simulate_discrete(n, N, mu, sigma)
 plt.hist(sim_results, bins='auto', density=True)
 x = np.linspace(min(sim_results), max(sim_results), 100)
 plt.plot(x, norm.pdf(x, 0, 1))
-plt.show() git config --global user.email "angel.higueros01@gmail.com"
-  git config --global user.name "Angel Higueros"
+plt.show() 
 
 # Paso 4
 plt.hist(sim_results, bins='auto', density=True, cumulative=True, histtype='step')
